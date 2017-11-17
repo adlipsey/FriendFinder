@@ -1,0 +1,25 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "Web app that collects user questionnaire input and matches \"friends\" based on compared responses",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adlipsey/FriendFinder.git"
+  },
+  "author": "Andrew Lipsey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adlipsey/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/adlipsey/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "path": "^0.12.7"
+  }
+}
