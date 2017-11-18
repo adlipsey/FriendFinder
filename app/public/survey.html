@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-	<style> body { background: url("../assets/images/ignasi_pattern_s.png")} .panel { border: 2px solid #ccc; margin: 10px 10px 40px 10px; padding: 0px; } .panel-heading {background-color: #b4cdcd; padding: 10px;} .panel-body {background-color: #dcdcdc; padding: 10px;} .jumbotron { background-color: #b4cdcd; margin-top: 40px;} #friend-pic{ width: 100%; height: auto; }
+	<style> body { background: url("../assets/images/ignasi_pattern_s.png")} .panel { border: 2px solid #ccc; margin: 10px 10px 40px 10px; padding: 0px; } .panel-heading {background-color: #b4cdcd; padding: 10px;} .panel-body {background-color: #dcdcdc; padding: 10px;} .jumbotron { background-color: #b4cdcd; margin-top: 40px;} #friend-pic{ width: 100%; height: auto; } a { font-size: 10px; color: #333;} a:hover {color: #b4cdcd;} #links {margin: 20px;}
 	</style>
 </head>
 <body>
@@ -142,6 +142,10 @@
 				</div><!--End panel-->
 			</div><!--End col-->
 		</div><!--End row-->
+		<div id="links">
+			<a href="/api/friends">Friends API </a>|
+			<a href="https://github.com/adlipsey/FriendFinder"> Project Repo</a>
+		</div>
 	</div><!--End container-->
 	<div class="modal fade" id="friendModal" data-show="true" tabindex="-1" role="dialog" aria-labelledby="friend-name" aria-hidden="true">
   		<div class="modal-dialog" role="document">
@@ -170,7 +174,7 @@
 		for(var i = 1; i <= 10; i++){
 			newFriend.scores.push(parseInt($("#q"+i).val()));
 		}
-		
+
 		$.post("/api/friends", newFriend, function(data){
 			console.log(data);
 			$("#friend-name").text(data.name);
