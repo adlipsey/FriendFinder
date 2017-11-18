@@ -2,8 +2,154 @@
 <html>
 <head>
 	<title>Friend Survey</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<style> body { background: url("../assets/images/ignasi_pattern_s.png")} .panel { border: 2px solid #ccc; margin: 10px 10px 40px 10px; padding: 0px; } .panel-heading {background-color: #b4cdcd; padding: 10px;} .panel-body {background-color: #dcdcdc; padding: 10px;} .jumbotron { background-color: #b4cdcd; margin-top: 40px;}
+	</style>
 </head>
 <body>
-	<h1>The Survey</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="jumbotron">
+					<h1>The Survey</h1>
+					<hr>
+					<p>Our patented Friend Finder survey utilizes the reverse-renal-osmotic model of psycho-social contrivification to pinpoint the specific personality traits that make you YOU. These are then compared against our world-wide network of personality profiles to find your new best friend! Fill out this seemingly simple survey below to find your match.</p>
+				</div>
+			</div>
+		</div><!--End row-->
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h5 class="panel-title">Please fill in all fields to find your best friend.</h5>
+					</div>
+					<div class="panel-body">
+						<form role="form">
+							<div class="form-group">
+								<label for="friendName">Name</label>
+								<input type="text" class="form-control" id="friendName">
+							</div>
+							<div class="form-group">
+								<label for="friendPic">URL of a Picture of You</label>
+								<input type="text" class="form-control" id="friendPic">
+							</div>
+							<div class="form-group">
+    							<label for="q1">1. Eating peanut butter out of the jar is a reasonable snack.</label>
+    							<select class="form-control" id="q1">
+      								<option value="5">5 - Strongly Agree</option>
+      								<option value="4">4 - Kinda Agree</option>
+      								<option value="3">3 - Meh</option>
+      								<option value="2">2 - Kinda Disagree</option>
+      								<option value="1">1 - Strongly Disagree</option>
+    							</select>
+  							</div>
+							<div class="form-group">
+    							<label for="q2">2. Hurting other people's feelings is okay if you're speaking the truth.</label>
+    							<select class="form-control" id="q2">
+      								<option value="5">5 - Strongly Agree</option>
+      								<option value="4">4 - Kinda Agree</option>
+      								<option value="3">3 - Meh</option>
+      								<option value="2">2 - Kinda Disagree</option>
+      								<option value="1">1 - Strongly Disagree</option>
+    							</select>
+  							</div>
+  							<div class="form-group">
+    							<label for="q3">3. You would rather spend an afternoon doing something than doing nothing.</label>
+    							<select class="form-control" id="q3">
+      								<option value="5">5 - Strongly Agree</option>
+      								<option value="4">4 - Kinda Agree</option>
+      								<option value="3">3 - Meh</option>
+      								<option value="2">2 - Kinda Disagree</option>
+      								<option value="1">1 - Strongly Disagree</option>
+    							</select>
+  							</div>
+  							<div class="form-group">
+    							<label for="q4">4. You find yourself sympathizing with the villians in Disney films.</label>
+    							<select class="form-control" id="q4">
+      								<option value="5">5 - Strongly Agree</option>
+      								<option value="4">4 - Kinda Agree</option>
+      								<option value="3">3 - Meh</option>
+      								<option value="2">2 - Kinda Disagree</option>
+      								<option value="1">1 - Strongly Disagree</option>
+    							</select>
+  							</div>
+							<div class="form-group">
+    							<label for="q5">5. If you found a wallet with cash and credit cards but no ID, you would still try to return it.</label>
+    							<select class="form-control" id="q5">
+      								<option value="5">5 - Strongly Agree</option>
+      								<option value="4">4 - Kinda Agree</option>
+      								<option value="3">3 - Meh</option>
+      								<option value="2">2 - Kinda Disagree</option>
+      								<option value="1">1 - Strongly Disagree</option>
+    							</select>
+  							</div>
+  							<div class="form-group">
+    							<label for="q6">6. You would rather eat something healthy than tastey.</label>
+    							<select class="form-control" id="q6">
+      								<option value="5">5 - Strongly Agree</option>
+      								<option value="4">4 - Kinda Agree</option>
+      								<option value="3">3 - Meh</option>
+      								<option value="2">2 - Kinda Disagree</option>
+      								<option value="1">1 - Strongly Disagree</option>
+    							</select>
+  							</div>
+  							<div class="form-group">
+    							<label for="q7">7. You would find it difficult to fire a loyal employee who is underperforming.</label>
+    							<select class="form-control" id="q7">
+      								<option value="5">5 - Strongly Agree</option>
+      								<option value="4">4 - Kinda Agree</option>
+      								<option value="3">3 - Meh</option>
+      								<option value="2">2 - Kinda Disagree</option>
+      								<option value="1">1 - Strongly Disagree</option>
+    							</select>
+  							</div>
+  							<div class="form-group">
+    							<label for="q8">8. Not going out over the weekend feels like a waste.</label>
+    							<select class="form-control" id="q8">
+      								<option value="5">5 - Strongly Agree</option>
+      								<option value="4">4 - Kinda Agree</option>
+      								<option value="3">3 - Meh</option>
+      								<option value="2">2 - Kinda Disagree</option>
+      								<option value="1">1 - Strongly Disagree</option>
+    							</select>
+  							</div>
+  							<div class="form-group">
+    							<label for="q9">9. You would do something you believe is morally wrong for enough money.</label>
+    							<select class="form-control" id="q9">
+      								<option value="5">5 - Strongly Agree</option>
+      								<option value="4">4 - Kinda Agree</option>
+      								<option value="3">3 - Meh</option>
+      								<option value="2">2 - Kinda Disagree</option>
+      								<option value="1">1 - Strongly Disagree</option>
+    							</select>
+  							</div>
+  							<div class="form-group">
+    							<label for="q10">10. Completing your To Do List is more rewarding than doing something fun.</label>
+    							<select class="form-control" id="q10">
+      								<option value="5">5 - Strongly Agree</option>
+      								<option value="4">4 - Kinda Agree</option>
+      								<option value="3">3 - Meh</option>
+      								<option value="2">2 - Kinda Disagree</option>
+      								<option value="1">1 - Strongly Disagree</option>
+    							</select>
+  							</div>
+  							<button type="submit" class="btn btn-primary" id="submit">Who's My Best Friend?!</button>
+						</form>
+					</div><!--End panel body-->
+				</div><!--End panel-->
+			</div><!--End col-->
+		</div><!--End row-->
+	</div><!--End container-->
+<script type="text/javascript">
+	$("#submit").on("click", function(event){
+		event.preventDefault();
+		var newFriend = {
+			"name": $("friendName").val().trim(),
+			"photo": $("friendPic").val().trim(),
+			"scores": [$("q1").val(), $("q2").val(), $("q3").val(), $("q4").val(), $("q5").val(), $("q6").val(), $("q7").val(), $("q8").val(), $("q9").val(), $("q10").val()]
+		}
+	})
+</script>
 </body>
 </html>
