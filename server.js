@@ -2,8 +2,6 @@
 var express = require("express");
 var path = require("path");
 var bodyParser = require("body-parser");
-var htmlRoute = require("./app/routing/htmlRoutes.js");
-var apiRoute = require("./app/routing/apiRoutes.js");
 
 //Set up Express
 var app = express();
@@ -14,9 +12,8 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
 //Link external route files
-app.use("/", htmlRoute);
-app.use("/survey", htmlRoute);
-app.use("/api/friends", apiRoute);
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
 
 //Console log listener @ PORT
 app.listen(PORT, function() {
